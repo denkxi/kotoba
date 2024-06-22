@@ -32,5 +32,11 @@ namespace api.Repositories
 
             return await languages.ToListAsync();
         }
+
+        public async Task<Language?> GetByIdAsync(Guid id)
+        {
+            return await _context.Languages
+            .FirstOrDefaultAsync(l => l.Id == id);
+        }
     }
 }

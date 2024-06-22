@@ -15,6 +15,9 @@ namespace api.Models
         public string NativeName { get; set; } = string.Empty;
         public bool IsCustom { get; set; } = true;
 
-        // public List<Dictionary>? Dictionaries { get; set; }
+        public Guid CreatedBy { get; set; } = Guid.Empty;
+
+        public List<Dictionary>? SourceDictionaries { get; set; }
+        public List<Dictionary>? TargetDictionaries { get; set; } 
     }
 }

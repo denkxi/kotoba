@@ -29,6 +29,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // .AddEntityFrameworkStores<ApplicationDbContext>(); //
 
 builder.Services.AddScoped<ILanguageRepository, LanguageRepository>(); //
+builder.Services.AddScoped<IDictionaryRepository, DictionaryRepository>(); //
 
 var app = builder.Build();
 
